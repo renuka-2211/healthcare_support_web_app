@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Support</title>
+</head>
+<body>
+    <h2>Mini Healthcare Support Form</h2>
+
+    <form method="post" action="/submit/">
+        {% csrf_token %}
+
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Phone:</label><br>
+        <input type="text" name="phone" required><br><br>
+
+        <label>Issue Type:</label><br>
+        <select name="issue">
+            <option>Appointment</option>
+            <option>Insurance</option>
+            <option>Emergency</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
